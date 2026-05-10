@@ -35,6 +35,5 @@ def test_health_endpoint(monkeypatch) -> None:
     assert response.status_code == 200
     assert response.json() == {
         "status": "healthy",
-        "database": "connected",
         "service": "FastAPI Homelab Backend",
     }
