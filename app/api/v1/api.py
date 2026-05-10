@@ -13,5 +13,11 @@ def health_check() -> dict[str, str]:
         "service": "FastAPI Homelab Backend",
     }
 
+@api_router.get("/version", tags=["Version"])
+def version() -> dict[str, str]:
+    return {
+        "version": "1.0.0",
+        "service": "FastAPI Homelab Backend",
+    }
 
 api_router.include_router(items_router)
