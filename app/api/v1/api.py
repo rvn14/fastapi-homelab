@@ -10,7 +10,6 @@ api_router = APIRouter()
 def health_check() -> dict[str, str]:
     return {
         "status": "healthy",
-        "database": "connected",
         "service": "FastAPI Homelab Backend",
     }
 
